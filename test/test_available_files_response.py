@@ -43,7 +43,10 @@ class TestAvailableFilesResponse(unittest.TestCase):
                         size = 56, 
                         modified = 56, 
                         created = 56, 
-                        crc32 = '0', )
+                        crc32 = '0', 
+                        extra = {
+                            'key' : '0'
+                            }, )
                     ]
             )
         else :
@@ -55,7 +58,10 @@ class TestAvailableFilesResponse(unittest.TestCase):
                         size = 56, 
                         modified = 56, 
                         created = 56, 
-                        crc32 = '0', )
+                        crc32 = '0', 
+                        extra = {
+                            'key' : '0'
+                            }, )
                     ],
         )
 

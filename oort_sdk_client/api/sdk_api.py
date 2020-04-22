@@ -105,8 +105,8 @@ class SdkApi(object):
                                                         local_var_params['topic'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `topic` when calling `query_available_files`")  # noqa: E501
 
-        if self.api_client.client_side_validation and 'topic' in local_var_params and not re.search(r'^[-_[:alnum:]]+$', local_var_params['topic']):  # noqa: E501
-            raise ApiValueError("Invalid value for parameter `topic` when calling `query_available_files`, must conform to the pattern `/^[-_[:alnum:]]+$/`")  # noqa: E501
+        if self.api_client.client_side_validation and 'topic' in local_var_params and not re.search(r'^[-_A-Za-z0-9]+$', local_var_params['topic']):  # noqa: E501
+            raise ApiValueError("Invalid value for parameter `topic` when calling `query_available_files`, must conform to the pattern `/^[-_A-Za-z0-9]+$/`")  # noqa: E501
         collection_formats = {}
 
         path_params = {}

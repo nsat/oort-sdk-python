@@ -38,7 +38,8 @@ class FileInfo(object):
         'size': 'int',
         'modified': 'int',
         'created': 'int',
-        'crc32': 'str'
+        'crc32': 'str',
+        'extra': 'dict(str, str)'
     }
 
     attribute_map = {
@@ -47,10 +48,11 @@ class FileInfo(object):
         'size': 'size',
         'modified': 'modified',
         'created': 'created',
-        'crc32': 'crc32'
+        'crc32': 'crc32',
+        'extra': 'extra'
     }
 
-    def __init__(self, id=None, path=None, size=None, modified=None, created=None, crc32=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, id=None, path=None, size=None, modified=None, created=None, crc32=None, extra=None, local_vars_configuration=None):  # noqa: E501
         """FileInfo - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -62,6 +64,7 @@ class FileInfo(object):
         self._modified = None
         self._created = None
         self._crc32 = None
+        self._extra = None
         self.discriminator = None
 
         self.id = id
@@ -70,6 +73,8 @@ class FileInfo(object):
         self.modified = modified
         self.created = created
         self.crc32 = crc32
+        if extra is not None:
+            self.extra = extra
 
     @property
     def id(self):
@@ -208,6 +213,27 @@ class FileInfo(object):
             raise ValueError("Invalid value for `crc32`, must not be `None`")  # noqa: E501
 
         self._crc32 = crc32
+
+    @property
+    def extra(self):
+        """Gets the extra of this FileInfo.  # noqa: E501
+
+
+        :return: The extra of this FileInfo.  # noqa: E501
+        :rtype: dict(str, str)
+        """
+        return self._extra
+
+    @extra.setter
+    def extra(self, extra):
+        """Sets the extra of this FileInfo.
+
+
+        :param extra: The extra of this FileInfo.  # noqa: E501
+        :type: dict(str, str)
+        """
+
+        self._extra = extra
 
     def to_dict(self):
         """Returns the model properties as a dict"""
