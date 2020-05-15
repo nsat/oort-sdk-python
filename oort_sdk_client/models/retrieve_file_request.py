@@ -82,6 +82,7 @@ class RetrieveFileRequest(object):
     def save_path(self):
         """Gets the save_path of this RetrieveFileRequest.  # noqa: E501
 
+        The destination path to save the file. Must be an absolute path.  # noqa: E501
 
         :return: The save_path of this RetrieveFileRequest.  # noqa: E501
         :rtype: str
@@ -92,12 +93,16 @@ class RetrieveFileRequest(object):
     def save_path(self, save_path):
         """Sets the save_path of this RetrieveFileRequest.
 
+        The destination path to save the file. Must be an absolute path.  # noqa: E501
 
         :param save_path: The save_path of this RetrieveFileRequest.  # noqa: E501
         :type: str
         """
         if self.local_vars_configuration.client_side_validation and save_path is None:  # noqa: E501
             raise ValueError("Invalid value for `save_path`, must not be `None`")  # noqa: E501
+        if (self.local_vars_configuration.client_side_validation and
+                save_path is not None and not re.search(r'^\/.*', save_path)):  # noqa: E501
+            raise ValueError(r"Invalid value for `save_path`, must be a follow pattern or equal to `/^\/.*/`")  # noqa: E501
 
         self._save_path = save_path
 

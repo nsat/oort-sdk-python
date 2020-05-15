@@ -37,12 +37,12 @@ class TestRetrieveFileRequest(unittest.TestCase):
         if include_optional :
             return RetrieveFileRequest(
                 id = '0', 
-                save_path = '0'
+                save_path = 'a'
             )
         else :
             return RetrieveFileRequest(
                 id = '0',
-                save_path = '0',
+                save_path = 'a',
         )
 
     def testRetrieveFileRequest(self):

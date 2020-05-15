@@ -33,23 +33,28 @@ class AvailableFilesResponse(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'files': 'list[FileInfo]'
+        'files': 'list[FileInfo]',
+        'overflow': 'bool'
     }
 
     attribute_map = {
-        'files': 'files'
+        'files': 'files',
+        'overflow': 'overflow'
     }
 
-    def __init__(self, files=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, files=None, overflow=None, local_vars_configuration=None):  # noqa: E501
         """AvailableFilesResponse - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
         self.local_vars_configuration = local_vars_configuration
 
         self._files = None
+        self._overflow = None
         self.discriminator = None
 
         self.files = files
+        if overflow is not None:
+            self.overflow = overflow
 
     @property
     def files(self):
@@ -73,6 +78,29 @@ class AvailableFilesResponse(object):
             raise ValueError("Invalid value for `files`, must not be `None`")  # noqa: E501
 
         self._files = files
+
+    @property
+    def overflow(self):
+        """Gets the overflow of this AvailableFilesResponse.  # noqa: E501
+
+        true if there are more files available than could be returned in this call  # noqa: E501
+
+        :return: The overflow of this AvailableFilesResponse.  # noqa: E501
+        :rtype: bool
+        """
+        return self._overflow
+
+    @overflow.setter
+    def overflow(self, overflow):
+        """Sets the overflow of this AvailableFilesResponse.
+
+        true if there are more files available than could be returned in this call  # noqa: E501
+
+        :param overflow: The overflow of this AvailableFilesResponse.  # noqa: E501
+        :type: bool
+        """
+
+        self._overflow = overflow
 
     def to_dict(self):
         """Returns the model properties as a dict"""

@@ -93,7 +93,7 @@ class SendFileRequest(object):
     def filepath(self):
         """Gets the filepath of this SendFileRequest.  # noqa: E501
 
-        the source filepath  # noqa: E501
+        The source filepath.  Must be an absolute path.  # noqa: E501
 
         :return: The filepath of this SendFileRequest.  # noqa: E501
         :rtype: str
@@ -104,13 +104,16 @@ class SendFileRequest(object):
     def filepath(self, filepath):
         """Sets the filepath of this SendFileRequest.
 
-        the source filepath  # noqa: E501
+        The source filepath.  Must be an absolute path.  # noqa: E501
 
         :param filepath: The filepath of this SendFileRequest.  # noqa: E501
         :type: str
         """
         if self.local_vars_configuration.client_side_validation and filepath is None:  # noqa: E501
             raise ValueError("Invalid value for `filepath`, must not be `None`")  # noqa: E501
+        if (self.local_vars_configuration.client_side_validation and
+                filepath is not None and not re.search(r'^\/.*', filepath)):  # noqa: E501
+            raise ValueError(r"Invalid value for `filepath`, must be a follow pattern or equal to `/^\/.*/`")  # noqa: E501
 
         self._filepath = filepath
 

@@ -37,7 +37,7 @@ class TestSendFileRequest(unittest.TestCase):
         if include_optional :
             return SendFileRequest(
                 destination = '0', 
-                filepath = '0', 
+                filepath = 'a', 
                 topic = '0', 
                 options = oort_sdk_client.models.send_options.SendOptions(
                     ttl_params = oort_sdk_client.models.ttl_params.TTLParams(
@@ -49,7 +49,7 @@ class TestSendFileRequest(unittest.TestCase):
         else :
             return SendFileRequest(
                 destination = '0',
-                filepath = '0',
+                filepath = 'a',
                 topic = '0',
         )
 

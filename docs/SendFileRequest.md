@@ -4,7 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **destination** | **str** | the destination to send the file to | 
-**filepath** | **str** | the source filepath | 
+**filepath** | **str** | The source filepath.  Must be an absolute path. | 
 **topic** | **str** | the pipeline topic to send the file to | 
 **options** | [**SendOptions**](SendOptions.md) |  | [optional] 
 
