@@ -28,6 +28,24 @@ class TestSdkApi(unittest.TestCase):
     def tearDown(self):
         pass
 
+    def test_command_adcs(self):
+        """Test case for command_adcs
+
+        """
+        pass
+
+    def test_get_adcs(self):
+        """Test case for get_adcs
+
+        """
+        pass
+
+    def test_get_tfrs(self):
+        """Test case for get_tfrs
+
+        """
+        pass
+
     def test_query_available_files(self):
         """Test case for query_available_files
 

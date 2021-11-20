@@ -56,13 +56,13 @@ from pprint import pprint
 with oort_sdk_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = oort_sdk_client.SdkApi(api_client)
-    topic = 'topic_example' # str | 
+    adcs_command_request = oort_sdk_client.AdcsCommandRequest() # AdcsCommandRequest | The file and parameters for sending
 
     try:
-        api_response = api_instance.query_available_files(topic)
+        api_response = api_instance.command_adcs(adcs_command_request)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling SdkApi->query_available_files: %s\n" % e)
+        print("Exception when calling SdkApi->command_adcs: %s\n" % e)
     
 ```
 
@@ -72,6 +72,9 @@ All URIs are relative to *http://localhost:2005/sdk/v1*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
+*SdkApi* | [**command_adcs**](docs/SdkApi.md#command_adcs) | **POST** /adcs | 
+*SdkApi* | [**get_adcs**](docs/SdkApi.md#get_adcs) | **GET** /adcs | 
+*SdkApi* | [**get_tfrs**](docs/SdkApi.md#get_tfrs) | **GET** /tfrs | 
 *SdkApi* | [**query_available_files**](docs/SdkApi.md#query_available_files) | **GET** /query_available_files/{topic} | 
 *SdkApi* | [**retrieve_file**](docs/SdkApi.md#retrieve_file) | **POST** /retrieve_file | 
 *SdkApi* | [**send_file**](docs/SdkApi.md#send_file) | **POST** /send_file | 
@@ -79,6 +82,14 @@ Class | Method | HTTP request | Description
 
 ## Documentation For Models
 
+ - [AdcsCommandRequest](docs/AdcsCommandRequest.md)
+ - [AdcsCommandResponse](docs/AdcsCommandResponse.md)
+ - [AdcsEulerT](docs/AdcsEulerT.md)
+ - [AdcsHk](docs/AdcsHk.md)
+ - [AdcsQuatT](docs/AdcsQuatT.md)
+ - [AdcsResponse](docs/AdcsResponse.md)
+ - [AdcsTarget](docs/AdcsTarget.md)
+ - [AdcsXyzFloatT](docs/AdcsXyzFloatT.md)
  - [AvailableFilesResponse](docs/AvailableFilesResponse.md)
  - [ErrorResponse](docs/ErrorResponse.md)
  - [FileInfo](docs/FileInfo.md)
@@ -87,5 +98,6 @@ Class | Method | HTTP request | Description
  - [SendFileResponse](docs/SendFileResponse.md)
  - [SendOptions](docs/SendOptions.md)
  - [TTLParams](docs/TTLParams.md)
+ - [TfrsResponse](docs/TfrsResponse.md)
 
 
