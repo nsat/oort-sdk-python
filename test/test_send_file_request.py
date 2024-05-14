@@ -44,7 +44,10 @@ class TestSendFileRequest(unittest.TestCase):
                         urgent = 56, 
                         bulk = 56, 
                         surplus = 56, ), 
-                    reliable = True, )
+                    reliable = True, 
+                    tags = {
+                        'key' : '0'
+                        }, )
             )
         else :
             return SendFileRequest(

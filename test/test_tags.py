@@ -16,11 +16,11 @@ import unittest
 import datetime
 
 import oort_sdk_client
-from oort_sdk_client.models.send_options import SendOptions  # noqa: E501
+from oort_sdk_client.models.tags import Tags  # noqa: E501
 from oort_sdk_client.rest import ApiException
 
-class TestSendOptions(unittest.TestCase):
-    """SendOptions unit test stubs"""
+class TestTags(unittest.TestCase):
+    """Tags unit test stubs"""
 
     def setUp(self):
         pass
@@ -29,28 +29,21 @@ class TestSendOptions(unittest.TestCase):
         pass
 
     def make_instance(self, include_optional):
-        """Test SendOptions
+        """Test Tags
             include_option is a boolean, when False only required
             params are included, when True both required and
             optional params are included """
-        # model = oort_sdk_client.models.send_options.SendOptions()  # noqa: E501
+        # model = oort_sdk_client.models.tags.Tags()  # noqa: E501
         if include_optional :
-            return SendOptions(
-                ttl_params = oort_sdk_client.models.ttl_params.TTLParams(
-                    urgent = 56, 
-                    bulk = 56, 
-                    surplus = 56, ), 
-                reliable = True, 
-                tags = {
-                    'key' : '0'
-                    }
+            return Tags(
+                token = '0'
             )
         else :
-            return SendOptions(
+            return Tags(
         )
 
-    def testSendOptions(self):
-        """Test SendOptions"""
+    def testTags(self):
+        """Test Tags"""
         inst_req_only = self.make_instance(include_optional=False)
         inst_req_and_optional = self.make_instance(include_optional=True)
 

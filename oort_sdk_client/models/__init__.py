@@ -30,4 +30,5 @@ from oort_sdk_client.models.send_file_request import SendFileRequest
 from oort_sdk_client.models.send_file_response import SendFileResponse
 from oort_sdk_client.models.send_options import SendOptions
 from oort_sdk_client.models.ttl_params import TTLParams
+from oort_sdk_client.models.tags import Tags
 from oort_sdk_client.models.tfrs_response import TfrsResponse

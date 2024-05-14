@@ -1,12 +1,10 @@
-# SendOptions
+# Tags
 
-options to apply to a send request
+a structure for optional file tags
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ttl_params** | [**TTLParams**](TTLParams.md) |  | [optional] 
-**reliable** | **bool** | whether to send an item reliably, i.e., with retries | [optional] [default to True]
-**tags** | [**Tags**](Tags.md) |  | [optional] 
+**token** | **str** | the ground-side reference id associated with the files being sent | [optional] [default to 'null']
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

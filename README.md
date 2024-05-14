@@ -98,6 +98,7 @@ Class | Method | HTTP request | Description
  - [SendFileResponse](docs/SendFileResponse.md)
  - [SendOptions](docs/SendOptions.md)
  - [TTLParams](docs/TTLParams.md)
+ - [Tags](docs/Tags.md)
  - [TfrsResponse](docs/TfrsResponse.md)
 
 
