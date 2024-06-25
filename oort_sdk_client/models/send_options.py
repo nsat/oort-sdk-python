@@ -35,7 +35,7 @@ class SendOptions(object):
     openapi_types = {
         'ttl_params': 'TTLParams',
         'reliable': 'bool',
-        'tags': 'Tags'
+        'tags': 'dict(str, str)'
     }
 
     attribute_map = {
@@ -110,9 +110,10 @@ class SendOptions(object):
     def tags(self):
         """Gets the tags of this SendOptions.  # noqa: E501
 
+        a structure for optional file tags  # noqa: E501
 
         :return: The tags of this SendOptions.  # noqa: E501
-        :rtype: Tags
+        :rtype: dict(str, str)
         """
         return self._tags
 
@@ -120,9 +121,10 @@ class SendOptions(object):
     def tags(self, tags):
         """Sets the tags of this SendOptions.
 
+        a structure for optional file tags  # noqa: E501
 
         :param tags: The tags of this SendOptions.  # noqa: E501
-        :type: Tags
+        :type: dict(str, str)
         """
 
         self._tags = tags
