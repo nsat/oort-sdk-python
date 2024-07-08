@@ -47,6 +47,9 @@ class TestSendFileRequest(unittest.TestCase):
                     reliable = True, 
                     tags = {
                         'key' : '0'
+                        }, 
+                    delivery_hints = {
+                        'key' : '0'
                         }, )
             )
         else :

@@ -46,6 +46,9 @@ class TestAvailableFilesResponse(unittest.TestCase):
                         crc32 = '0', 
                         extra = {
                             'key' : '0'
+                            }, 
+                        delivery_hints = {
+                            'key' : '0'
                             }, )
                     ], 
                 overflow = True
@@ -61,6 +64,9 @@ class TestAvailableFilesResponse(unittest.TestCase):
                         created = 56, 
                         crc32 = '0', 
                         extra = {
+                            'key' : '0'
+                            }, 
+                        delivery_hints = {
                             'key' : '0'
                             }, )
                     ],

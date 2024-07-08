@@ -23,6 +23,7 @@ from oort_sdk_client.models.adcs_response import AdcsResponse
 from oort_sdk_client.models.adcs_target import AdcsTarget
 from oort_sdk_client.models.adcs_xyz_float_t import AdcsXyzFloatT
 from oort_sdk_client.models.available_files_response import AvailableFilesResponse
+from oort_sdk_client.models.delivery_hints import DeliveryHints
 from oort_sdk_client.models.error_response import ErrorResponse
 from oort_sdk_client.models.file_info import FileInfo
 from oort_sdk_client.models.retrieve_file_request import RetrieveFileRequest

@@ -91,6 +91,7 @@ Class | Method | HTTP request | Description
  - [AdcsTarget](docs/AdcsTarget.md)
  - [AdcsXyzFloatT](docs/AdcsXyzFloatT.md)
  - [AvailableFilesResponse](docs/AvailableFilesResponse.md)
+ - [DeliveryHints](docs/DeliveryHints.md)
  - [ErrorResponse](docs/ErrorResponse.md)
  - [FileInfo](docs/FileInfo.md)
  - [RetrieveFileRequest](docs/RetrieveFileRequest.md)

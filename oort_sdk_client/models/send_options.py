@@ -35,16 +35,18 @@ class SendOptions(object):
     openapi_types = {
         'ttl_params': 'TTLParams',
         'reliable': 'bool',
-        'tags': 'dict(str, str)'
+        'tags': 'dict(str, str)',
+        'delivery_hints': 'DeliveryHints'
     }
 
     attribute_map = {
         'ttl_params': 'TTLParams',
         'reliable': 'reliable',
-        'tags': 'tags'
+        'tags': 'tags',
+        'delivery_hints': 'delivery_hints'
     }
 
-    def __init__(self, ttl_params=None, reliable=True, tags=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, ttl_params=None, reliable=True, tags=None, delivery_hints=None, local_vars_configuration=None):  # noqa: E501
         """SendOptions - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -53,6 +55,7 @@ class SendOptions(object):
         self._ttl_params = None
         self._reliable = None
         self._tags = None
+        self._delivery_hints = None
         self.discriminator = None
 
         if ttl_params is not None:
@@ -61,6 +64,8 @@ class SendOptions(object):
             self.reliable = reliable
         if tags is not None:
             self.tags = tags
+        if delivery_hints is not None:
+            self.delivery_hints = delivery_hints
 
     @property
     def ttl_params(self):
@@ -128,6 +133,27 @@ class SendOptions(object):
         """
 
         self._tags = tags
+
+    @property
+    def delivery_hints(self):
+        """Gets the delivery_hints of this SendOptions.  # noqa: E501
+
+
+        :return: The delivery_hints of this SendOptions.  # noqa: E501
+        :rtype: DeliveryHints
+        """
+        return self._delivery_hints
+
+    @delivery_hints.setter
+    def delivery_hints(self, delivery_hints):
+        """Sets the delivery_hints of this SendOptions.
+
+
+        :param delivery_hints: The delivery_hints of this SendOptions.  # noqa: E501
+        :type: DeliveryHints
+        """
+
+        self._delivery_hints = delivery_hints
 
     def to_dict(self):
         """Returns the model properties as a dict"""

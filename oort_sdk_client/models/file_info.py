@@ -39,7 +39,8 @@ class FileInfo(object):
         'modified': 'int',
         'created': 'int',
         'crc32': 'str',
-        'extra': 'dict(str, str)'
+        'extra': 'dict(str, str)',
+        'delivery_hints': 'DeliveryHints'
     }
 
     attribute_map = {
@@ -49,10 +50,11 @@ class FileInfo(object):
         'modified': 'modified',
         'created': 'created',
         'crc32': 'crc32',
-        'extra': 'extra'
+        'extra': 'extra',
+        'delivery_hints': 'delivery_hints'
     }
 
-    def __init__(self, id=None, path=None, size=None, modified=None, created=None, crc32=None, extra=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, id=None, path=None, size=None, modified=None, created=None, crc32=None, extra=None, delivery_hints=None, local_vars_configuration=None):  # noqa: E501
         """FileInfo - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -65,6 +67,7 @@ class FileInfo(object):
         self._created = None
         self._crc32 = None
         self._extra = None
+        self._delivery_hints = None
         self.discriminator = None
 
         self.id = id
@@ -75,6 +78,8 @@ class FileInfo(object):
         self.crc32 = crc32
         if extra is not None:
             self.extra = extra
+        if delivery_hints is not None:
+            self.delivery_hints = delivery_hints
 
     @property
     def id(self):
@@ -234,6 +239,27 @@ class FileInfo(object):
         """
 
         self._extra = extra
+
+    @property
+    def delivery_hints(self):
+        """Gets the delivery_hints of this FileInfo.  # noqa: E501
+
+
+        :return: The delivery_hints of this FileInfo.  # noqa: E501
+        :rtype: DeliveryHints
+        """
+        return self._delivery_hints
+
+    @delivery_hints.setter
+    def delivery_hints(self, delivery_hints):
+        """Sets the delivery_hints of this FileInfo.
+
+
+        :param delivery_hints: The delivery_hints of this FileInfo.  # noqa: E501
+        :type: DeliveryHints
+        """
+
+        self._delivery_hints = delivery_hints
 
     def to_dict(self):
         """Returns the model properties as a dict"""
