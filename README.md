@@ -1,7 +1,7 @@
 # oort-sdk-client
 Client interface to the OORT agent.
 
-- API version: 1.3
+- API version: 1.5
 - Package version: 1.0.0
 For more information, please visit [https://developers.spire.com/oort-docs/index.html](https://developers.spire.com/oort-docs/index.html)
 
@@ -91,6 +91,7 @@ Class | Method | HTTP request | Description
  - [AdcsTarget](docs/AdcsTarget.md)
  - [AdcsXyzFloatT](docs/AdcsXyzFloatT.md)
  - [AvailableFilesResponse](docs/AvailableFilesResponse.md)
+ - [DeliveryHints](docs/DeliveryHints.md)
  - [ErrorResponse](docs/ErrorResponse.md)
  - [FileInfo](docs/FileInfo.md)
  - [RetrieveFileRequest](docs/RetrieveFileRequest.md)
