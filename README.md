@@ -1,7 +1,7 @@
 # oort-sdk-client
 Client interface to the OORT agent.
 
-- API version: 1.3
+- API version: 1.5
 - Package version: 1.0.0
 For more information, please visit [https://developers.spire.com/oort-docs/index.html](https://developers.spire.com/oort-docs/index.html)
 
