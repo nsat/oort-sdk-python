@@ -1,6 +1,8 @@
 # oort-sdk-client
 Client interface to the OORT agent.
 
+> **Deprecated:** This SDK is deprecated for Python 3 usage. For Python 3+, use [oort-sdk-python3](https://github.com/nsat/oort-sdk-python3) instead.
+
 - API version: 1.5
 - Package version: 1.0.0
 For more information, please visit [https://developers.spire.com/oort-docs/index.html](https://developers.spire.com/oort-docs/index.html)
